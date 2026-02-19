@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roblox Launcher Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar panel">
+        <h1>Roblox Launcher Companion</h1>
+        <p class="muted">Live discovery with resilient upstream fallback and actionable diagnostics.</p>
+
+        <div class="cta-stack">
+          <a class="btn official" href="https://www.roblox.com/login" target="_blank" rel="noreferrer">Official Roblox Login</a>
+          <a class="btn" href="https://www.roblox.com/download" target="_blank" rel="noreferrer">Official Roblox Download</a>
+        </div>
+
+        <p class="warning">This app is a companion client. Authentication, purchases, and game joining are performed by official Roblox services only.</p>
+      </aside>
+
+      <main class="content panel">
+        <header class="toolbar">
+          <input id="search" type="search" placeholder="Search games and catalog items..." />
+          <button id="searchBtn" class="btn">Search</button>
+        </header>
+
+        <section>
+          <div class="row-head">
+            <h2>Games</h2>
+            <div class="pager">
+              <button id="gamesPrev" class="btn">Prev</button>
+              <span id="gamesPage">Page 1</span>
+              <button id="gamesNext" class="btn">Next</button>
+            </div>
+          </div>
+          <div id="gamesGrid" class="grid"></div>
+        </section>
+
+        <section>
+          <div class="row-head">
+            <h2>Marketplace Items</h2>
+            <div class="pager">
+              <button id="itemsPrev" class="btn">Prev</button>
+              <span id="itemsPage">Page 1</span>
+              <button id="itemsNext" class="btn">Next</button>
+            </div>
+          </div>
+          <div id="itemsGrid" class="grid"></div>
+        </section>
+
+        <section class="diag panel-sub">
+          <h3>Diagnostics</h3>
+          <p id="status" class="status">Ready.</p>
+          <pre id="diag" class="diag-box">No diagnostics yet.</pre>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
